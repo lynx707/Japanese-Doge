@@ -45,7 +45,7 @@ const np = new MessageEmbed()
         },
         {
           name: `Developer`,
-          value: `<:profile:1119915826326278265> **[Youtube](https://www.youtube.com/c/diwasatreya)**`,
+          value: `<:profile:1119915826326278265> **[Youtube](https://www.youtube.com/patkhet)**`,
           inline: true,
         },
       ])
