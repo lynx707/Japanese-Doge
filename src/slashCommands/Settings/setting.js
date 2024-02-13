@@ -27,7 +27,7 @@ const res = await db2.findOne({ Guild: interaction.guildId });
 
 
 if(!ress){
-  station = "Lofi Radio (Default)"
+  station = "Japanese Radio (Default)"
 }
 
     if(!res){
