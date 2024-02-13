@@ -18,9 +18,9 @@ module.exports = {
 
   nodes: [
     {
-      url: process.env.NODE_URL || 'lava.dcmusic.ca:443',
-      name: process.env.NODE_NAME || 'Lavalink Nep',
-      auth: process.env.NODE_AUTH || 'youshallnotpass',
+      url: process.env.NODE_URL || 'lavalink-localnet.ajieblogs.eu.org:443',
+      name: process.env.NODE_NAME || 'Lavalink AjieDev',
+      auth: process.env.NODE_AUTH || 'https://dsc.gg/ajidevserver',
       secure: parseBoolean(process.env.NODE_SECURE || 'true'),
     },
   ],
