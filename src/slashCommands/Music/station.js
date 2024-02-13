@@ -21,7 +21,7 @@ module.exports = {
        await interaction.deferReply({
         ephemeral: false,
        });
-  let station = "Lofi Radio (Default)"
+  let station = "Japanese Radio (Default)"
 const ress = await db1.findOne({ Guild: interaction.guildId });
  if(ress) station = ress.Radio;
       
@@ -36,20 +36,20 @@ const ress = await db1.findOne({ Guild: interaction.guildId });
           .setCustomId('station')
           .setMinValues(1)
           .setMaxValues(1)
-          .setPlaceholder('Lofi Radio Stations')
+          .setPlaceholder('Japanese Radio Stations')
           .addOptions([
             {
-              label: 'Anime lo-fi',
+              label: 'Pop Music',
               value: 'anime',
               emoji: '🌸',
             },
             {
-              label: ' Sleep lo-fi',
+              label: 'Lo-fi Music',
               value: 'sleep',
               emoji: '😴',
             },
             {
-              label: 'Study lo-fi',
+              label: 'BGM Music',
               value: 'study',
               emoji: '📖',
             }
@@ -64,20 +64,20 @@ const ress = await db1.findOne({ Guild: interaction.guildId });
         .setDisabled(true)
           .setMinValues(1)
           .setMaxValues(1)
-          .setPlaceholder('Lofi Radio Stations')
+          .setPlaceholder('Japanese Radio Stations')
           .addOptions([
             {
-              label: 'Anime lo-fi',
+              label: 'Pop Music',
               value: 'anime',
               emoji: '🌸',
             },
             {
-              label: ' Sleep lo-fi',
+              label: 'Lo-fi Music',
               value: 'sleep',
               emoji: '😴',
             },
             {
-              label: 'Study lo-fi',
+              label: 'BGM Music',
               value: 'study',
               emoji: '📖',
             }
@@ -122,7 +122,7 @@ if (options === 'anime') {
 
  if (ress) {
       ress.oldradio = station;
-      ress.Radio = "Anime lo-fi";
+      ress.Radio = "Pop Music";
       await ress.save()
               if (!m) return; 
   m.edit({
@@ -131,7 +131,7 @@ if (options === 'anime') {
     } else {
       const newData = new db1({
         Guild: interaction.guildId,
-        Radio: "Anime lo-fi",
+        Radio: "Pop Music",
         oldradio: station
       });
            if (!m) return; 
@@ -160,7 +160,7 @@ if (options === 'anime') {
   
                if (ress) {
       ress.oldradio = station;
-      ress.Radio = "Sleep lo-fi";
+      ress.Radio = "Lo-fi Music";
       await ress.save()
               if (!m) return; 
   m.edit({
@@ -169,7 +169,7 @@ if (options === 'anime') {
     } else {
       const newData = new db1({
         Guild: interaction.guildId,
-        Radio: "Sleep lo-fi",
+        Radio: "Lo-fi Music",
         oldradio: station
       });
            if (!m) return; 
@@ -189,7 +189,7 @@ if (options === 'anime') {
   
                if (ress) {
       ress.oldradio = station;
-      ress.Radio = "Study lo-fi";
+      ress.Radio = "BGM Music";
       await ress.save()
               if (!m) return; 
   m.edit({
@@ -198,7 +198,7 @@ if (options === 'anime') {
     } else {
       const newData = new db1({
         Guild: interaction.guildId,
-        Radio: "Study lo-fi",
+        Radio: "BGM Music",
         oldradio: station
       });
            if (!m) return; 
