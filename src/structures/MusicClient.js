@@ -54,10 +54,10 @@ class MusicBot extends Client {
         new Spotify({
           clientId: this.config.SpotifyID,
           clientSecret: this.config.SpotifySecret,
-          playlistPageLimit: 3, // optional ( 100 tracks per page )
-          albumPageLimit: 4, // optional ( 50 tracks per page )
-          searchLimit: 10, // optional ( track search limit. Max 50 )
-          searchMarket: 'IN', // optional || default: US ( Enter the country you live in. [ Can only be of 2 letters. For eg: US, IN, EN ] )//
+          playlistPageLimit: 100, // optional ( 100 tracks per page )
+          albumPageLimit: 50, // optional ( 50 tracks per page )
+          searchLimit: 50, // optional ( track search limit. Max 50 )
+          searchMarket: 'BD', // optional || default: US ( Enter the country you live in. [ Can only be of 2 letters. For eg: US, IN, EN ] )//
         }),
         new Plugins.PlayerMoved(this),
       ],
